@@ -5,8 +5,13 @@ body {
 }
 
 .grid-container {
+  display: grid;
+  grid-template-rows: [header-start] 1fr [header-end] 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
   height: 100vh;
   width: 100vw;
+  justify-content: center;
   /* your properties here */
 }
 
@@ -16,3 +21,9 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 50%;
+  width: 50%;
+  align-self: stretch;
+}
